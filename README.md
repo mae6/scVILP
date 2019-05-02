@@ -1,3 +1,4 @@
 # VILP
 # Description
-**Variant-calling by Integer Linear Programming (VILP)** is a new approach to mutation detection in individual tumor cells by leveraging the evolutionary relationship among cells. SCIPhI, jointly calls mutations in each individual cell and estimates the tumor phylogeny on these cells. Employing a Markov Chain Monte Carlo scheme we robustly account for the various sources of noise in single-cell sequencing data. Our approach enables us to reliably call mutations in each single cell even in experiments with high dropout rates and missing data
+**Variant-calling by Integer Linear Programming (VILP)** is a new approach to mutation calling in single cells with Perfect Phylogeny assumption using Integer Linear Programming formulations. VILP jointly calls mutations for each cell and estimates the Perfect Phylogeny of those cells in the presence of allelic dropouts and missing data. 
+VILP is scalable to high number of cells and mutations by introducing a novel super-tree algorithm which could be run parallelly on multiple processors. 
