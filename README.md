@@ -6,4 +6,4 @@ These instructions will get you a copy of the project up and running on your loc
 ## Running scVILP
 ### Inputs
 * The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
-* The list of the cell names is optional, in case the cell names are not avaialble, they are named as cellK where K is the index of the cell
+* The list of the cell names is optional, in case the cell names are not avaialble, they are named as *cell K* where *K* is the index of the cell
