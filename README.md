@@ -4,5 +4,5 @@ scVILP is scalable to high number of cells and mutations by introducing a novel 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 ## Running scVILP
-The input data of scVILP is the output of sequence alignment in mpileup format
+The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
 The list of the cell names is optional, in case the cell names are not avaialble, they are named as cellK where K is the index of the cell
