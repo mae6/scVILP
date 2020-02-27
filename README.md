@@ -4,10 +4,10 @@ It is possible for the user to investigate the violations of infinite-sites assu
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 ### Requirements
-* **[Anaconda]**(https://docs.anaconda.com/anaconda/install/) - we recommend installing Anaconda for your OS to manage the required packages
-* **[Gurobi]**(https://www.gurobi.com/gurobi-and-anaconda-for-mac/) - after installation of Anaconda, you need to install Gurobi optimizer into Anaconda for Integer Linear Programming 
+* **[Anaconda](https://docs.anaconda.com/anaconda/install/)** - we recommend installing Anaconda for your OS to manage the required packages
+* **[Gurobi](https://www.gurobi.com/gurobi-and-anaconda-for-mac/)** - after installation of Anaconda, you need to install Gurobi optimizer into Anaconda for Integer Linear Programming 
 * **PerfectPhy** - to reconstruct the Perfect Phylogeny we have used PerfectPhy package. You can download it from [here](https://csiflabs.cs.ucdavis.edu/~gusfield/software.html) or install the version provided in the scripts directory of this repository
-* **Ete3** - install Python package, Ete3 into anaconda by running:
+* **[ete3]** - install Python package, ete3 into Anaconda by running:
 ```
 conda install -c etetoolkit ete3
 ```
