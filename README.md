@@ -3,6 +3,10 @@
 It is possible for the user to investigate the violations of infinite-sites assumption on the inference by setting an upper bound on the number of violations 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Requirements
+* Anaconda 
+* Gurobi
+* PerfectPhy
 ## Running scVILP
 ### Inputs
 * The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
