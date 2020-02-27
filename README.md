@@ -6,13 +6,13 @@ These instructions will get you a copy of the project up and running on your loc
 ## Running scVILP
 ### Inputs
 * The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
-* The list of the cell names is optional, in case the cell names are not avaialble, they are named as *cell k* where *k* is the index of the cell
+* At least the number of cells is required, or a file containing the cell names which is optional, in case the cell names are not avaialble, they are named as *cell k* where *k* is the index of the cell
 ### Running the pipeline step by step
 #### Filtering the candidate loci
 ```
 python 
 ```
 At this step, the user needs to select the loci on which they are performing the analysis. The parameters are as follows:
-* *m*: at each cell and genomic loci, this parameter requires a minimum of *m* variant counts 
-* *n*: at each genomic loci, this parameter requires at least *n* cells to have the minimum number of variants (*m*)
+* *ms*: at each cell and genomic loci, this parameter requires a minimum of *ms* variant counts 
+* *nmc*: at each genomic loci, this parameter requires at least *n* cells to have the minimum number of variants (*m*)
 
