@@ -3,12 +3,19 @@
 It is possible for the user to investigate the violations of infinite-sites assumption on the inference by setting an upper bound on the number of violations 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Requirements
+* We recommend installing Anaconda for your OS: [See the instructions](https://docs.anaconda.com/anaconda/install/) 
+* After installation of Anaconda, you need to install Gurobi into Anaconda: [See the instructions](https://www.gurobi.com/gurobi-and-anaconda-for-mac/)
+* To reconstruct the Perfect Phylogeny we have used PerfectPhy package. You can download it from [here](https://csiflabs.cs.ucdavis.edu/~gusfield/software.html) or install the version provided in the scripts directory of this repository
+* Install Python package, Ete3 into anaconda by running:
+```
+conda install -c etetoolkit ete3
+```
 ## Running scVILP
 ### Inputs
 * The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
 * At least the number of cells is required, or a file containing the cell names which is optional, in case the cell names are not avaialble, they are named as *cell k* where *k* is the index of the cell
-### Running the pipeline step by step
-#### Filtering the candidate loci
+### Filtering the candidate loci
 Running it using the number of cells
 ```
 python loci_filter.py -in ovarian.mpileup -out ./output.mpileup -n 370 -ms 2 -nmc 3 
@@ -23,5 +30,12 @@ At this step, the user needs to select the loci on which they are performing the
 * *ms*: at each cell and genomic loci, this parameter requires a minimum of *ms* variant counts 
 * *nmc*: at each genomic loci, this parameter requires at least *n* cells to have the minimum number of variants (*m*)
 
-#### Running scVILP
-Our method generates the phylogenetic tree in Newick format only when there is no violations of infinite-sites assumption. Before running scVILP, please specify the path to the directory of PerfectPhy in scVILP_main.py, the default path to PerfectPhy directory is the same where the scripts are
+### Running scVILP
+Our method generates the phylogenetic tree in Newick format only when there is no violations of infinite-sites assumption. Before running scVILP, please specify the path to the directory of PerfectPhy in scVILP_main.py, the default path to PerfectPhy directory is the same where the scripts are. To run scVILP, enter the following command:
+```
+python scVILP_main.py -in <path to the mpileup file> -names <path to the cell names>
+```
+To see the other options:
+```
+python scVILP_main.py --help
+``
