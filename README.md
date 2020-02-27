@@ -5,7 +5,7 @@ It is possible for the user to investigate the violations of infinite-sites assu
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 ### Requirements
 * We recommend installing Anaconda for your OS: [See the instructions](https://docs.anaconda.com/anaconda/install/) 
-* After installation of Anaconda, you need to install Gurobi into Anaconda:[See the instructions](https://www.gurobi.com/gurobi-and-anaconda-for-mac/)
+* After installation of Anaconda, you need to install Gurobi into Anaconda: [See the instructions](https://www.gurobi.com/gurobi-and-anaconda-for-mac/)
 * To reconstruct the Perfect Phylogeny we have used PerfectPhy package. You can download it from [here](https://csiflabs.cs.ucdavis.edu/~gusfield/software.html) or install the version provided in the scripts directory of this repository
 * Install Python package, Ete3 into anaconda by running:
 ```
