@@ -10,9 +10,15 @@ These instructions will get you a copy of the project up and running on your loc
 ### Running the pipeline step by step
 #### Filtering the candidate loci
 ```
-python loci_filter.py -in <path to the mpileup file> -out <path for the output mpileup file> -n <number of cells> -ms <minimum variant counts> -nmc <minimum number of cells having a variant> 
+python loci_filter.py -in ovarian.mpileup -out ./output.mpileup -n 370 -ms 2 -nmc 3 
+```
+Or 
+```
+python loci_filter.py -in ovarian.mpileup -out ./output,mpileup -names cellNames.txt -ms 2 -nmc 3
 ```
 At this step, the user needs to select the loci on which they are performing the analysis. The parameters are as follows:
+* *in*: path to the input file
+* *out*: path to the output file
 * *ms*: at each cell and genomic loci, this parameter requires a minimum of *ms* variant counts 
 * *nmc*: at each genomic loci, this parameter requires at least *n* cells to have the minimum number of variants (*m*)
 
