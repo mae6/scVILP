@@ -3,23 +3,23 @@ import copy
 import argparse 
 import sys
 
-def match(str):
+def match(str_):
 	tmp = 0
-	tmp+=str.count(",")
-	tmp+=str.count(".")
+	tmp+=str_.count(",")
+	tmp+=str_.count(".")
 	return tmp
-def mismatch(str):
+def mismatch(str_):
 	tmp=0
-	tmp+=str.count("A")
-	tmp+=str.count("C")
-	tmp+=str.count("G")
-	tmp+=str.count("T")
-	tmp+=str.count("N")
-	tmp+=str.count("a")
-	tmp+=str.count("c")
-	tmp+=str.count("g")
-	tmp+=str.count("t")
-	tmp+=str.count("n")
+	tmp+=str_.count("A")
+	tmp+=str_.count("C")
+	tmp+=str_.count("G")
+	tmp+=str_.count("T")
+	tmp+=str_.count("N")
+	tmp+=str_.count("a")
+	tmp+=str_.count("c")
+	tmp+=str_.count("g")
+	tmp+=str_.count("t")
+	tmp+=str_.count("n")
 	return tmp
 
 if __name__ == "__main__":
