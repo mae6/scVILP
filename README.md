@@ -13,6 +13,6 @@ These instructions will get you a copy of the project up and running on your loc
 python 
 ```
 At this step, the user needs to select the loci on which they are performing the analysis. The parameters are as follows:
-* *m*: at each cell and genomic loci, this parameter requires a minimum of *m* variant counts 
-* *n*: at each genomic loci, this parameter requires at least *n* cells to have the minimum number of variants (*m*)
+* *ms*: at each cell and genomic loci, this parameter requires a minimum of *ms* variant counts 
+* *nmc*: at each genomic loci, this parameter requires at least *n* cells to have the minimum number of variants (*m*)
 
