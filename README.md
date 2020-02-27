@@ -6,7 +6,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Running scVILP
 ### Inputs
 * The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
-* The list of the cell names is optional, in case the cell names are not avaialble, they are named as *cell k* where *k* is the index of the cell
+* At least the number of cells is required, or a file containing the cell names which is optional, in case the cell names are not avaialble, they are named as *cell k* where *k* is the index of the cell
 ### Running the pipeline step by step
 #### Filtering the candidate loci
 ```
