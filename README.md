@@ -9,10 +9,11 @@ These instructions will get you a copy of the project up and running on your loc
 * At least the number of cells is required, or a file containing the cell names which is optional, in case the cell names are not avaialble, they are named as *cell k* where *k* is the index of the cell
 ### Running the pipeline step by step
 #### Filtering the candidate loci
+Running it using the number of cells
 ```
 python loci_filter.py -in ovarian.mpileup -out ./output.mpileup -n 370 -ms 2 -nmc 3 
 ```
-Or 
+Or, using a text file containing the cell names to run this code
 ```
 python loci_filter.py -in ovarian.mpileup -out ./output,mpileup -names cellNames.txt -ms 2 -nmc 3
 ```
