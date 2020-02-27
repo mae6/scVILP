@@ -31,4 +31,11 @@ At this step, the user needs to select the loci on which they are performing the
 * *nmc*: at each genomic loci, this parameter requires at least *n* cells to have the minimum number of variants (*m*)
 
 ### Running scVILP
-Our method generates the phylogenetic tree in Newick format only when there is no violations of infinite-sites assumption. Before running scVILP, please specify the path to the directory of PerfectPhy in scVILP_main.py, the default path to PerfectPhy directory is the same where the scripts are
+Our method generates the phylogenetic tree in Newick format only when there is no violations of infinite-sites assumption. Before running scVILP, please specify the path to the directory of PerfectPhy in scVILP_main.py, the default path to PerfectPhy directory is the same where the scripts are. To run scVILP, enter the following command:
+```
+python scVILP_main.py -in <path to the mpileup file> -names <path to the cell names>
+```
+To see the other options:
+```
+python scVILP_main.py --help
+``
