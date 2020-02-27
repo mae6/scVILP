@@ -4,14 +4,14 @@ It is possible for the user to investigate the violations of infinite-sites assu
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 ### Requirements
-* [Anaconda](https://docs.anaconda.com/anaconda/install/) - we recommend installing Anaconda for your OS
-* [Gurobi](https://www.gurobi.com/gurobi-and-anaconda-for-mac/) - after installation of Anaconda, you need to install Gurobi into Anaconda
-* PerfectPhy - To reconstruct the Perfect Phylogeny we have used PerfectPhy package. You can download it from [here](https://csiflabs.cs.ucdavis.edu/~gusfield/software.html) or install the version provided in the scripts directory of this repository
-* Install Python package, Ete3 into anaconda by running:
+* **[Anaconda]**(https://docs.anaconda.com/anaconda/install/) - we recommend installing Anaconda for your OS to manage the required packages
+* **[Gurobi]**(https://www.gurobi.com/gurobi-and-anaconda-for-mac/) - after installation of Anaconda, you need to install Gurobi optimizer into Anaconda for Integer Linear Programming 
+* **PerfectPhy** - to reconstruct the Perfect Phylogeny we have used PerfectPhy package. You can download it from [here](https://csiflabs.cs.ucdavis.edu/~gusfield/software.html) or install the version provided in the scripts directory of this repository
+* **Ete3** - install Python package, Ete3 into anaconda by running:
 ```
 conda install -c etetoolkit ete3
 ```
-* [PAUP](http://phylosolutions.com/paup-test/) - To visualize the phylogenetic tree, download and install PAUP
+* **[PAUP]** (http://phylosolutions.com/paup-test/) - to visualize the phylogenetic tree using the Newick output file, download and install PAUP
 ## Running scVILP
 ### Inputs
 * The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
