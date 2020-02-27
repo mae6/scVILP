@@ -36,9 +36,9 @@ if __name__ == "__main__":
 		# help="a file containing the names of the cells at each row, each row must be of the form \'cell CELL_ID\', for example \'cell 200\' denotes the cell with the ID 200")
 	ap.add_argument("-out","--output file name",required=False, help="path of the summary mpileup file")
 	ap.add_argument("-in","--input mpileup file",required=True, help="path to the input file")
-	ap.add_argument("-ms","--minimum coverage",required=False, help="The minimum number of reads required to support the alternative")
+	ap.add_argument("-ms","--minimum coverage",required=False, help="The minimum number of reads required to support the alternative, default value 3")
 	ap.add_argument("-nmc","--minimum cells",required=False,
-		help="The number of cells having a minimum number of alternative reads needed to consider a genomic location a mutation candidate locus")
+		help="The number of cells having a minimum number of alternative reads needed to consider a genomic location a mutation candidate locus, default value 2")
 	args = vars(ap.parse_args())
 
 	if args['number of cells']==None and args['cell names']==None:
