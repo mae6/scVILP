@@ -52,7 +52,7 @@ python scVILP_main.py --help
 ```
 ## Outputs
 Running the main code, generates two files in the output directory specified by the user:
-* A VCF file describing the inferred genotypes for all the cells named snv.vcf 
+* A VCF file named snv.vcf describing the inferred genotypes for all the cells
 * A Nexus file named *phylogeny.nex* containing the Newick string of the Perfect Phylogeny with leaves labeled by cell names
   - **Note**: Our method generates the phylogenetic tree in Newick format only when there is no violations of infinite-sites assumption. Before running scVILP, please specify the path to the directory of PerfectPhy in scVILP_main.py, the default path to PerfectPhy directory is the same where the scripts are.
 ## Contact
