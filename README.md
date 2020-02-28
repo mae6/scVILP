@@ -29,11 +29,11 @@ conda install -c etetoolkit ete3
 First, run one of the following commmands to identify the candidate mutation loci
 1- With the number of cells:
 ```
-python loci_filter.py -in ovarian.mpileup -out ./output.mpileup -n 370 -ms 2 -nmc 3 
+python loci_identify.py -in ovarian.mpileup -out ./output.mpileup -n 370 -ms 2 -nmc 3 
 ```
 2- Or, using a text file containing the cell names to run this code:
 ```
-python loci_filter.py -in ovarian.mpileup -out ./output,mpileup -names cellNames.txt -ms 2 -nmc 3
+python loci_identify.py -in ovarian.mpileup -out ./output,mpileup -names cellNames.txt -ms 2 -nmc 3
 ```
 At this step, the user needs to select the loci on which they are performing the analysis. The parameters are as follows:
 * *in*: path to the input file
