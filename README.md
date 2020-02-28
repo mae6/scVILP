@@ -18,7 +18,7 @@ It is possible for the user to investigate the violations of infinite-sites assu
 * **PerfectPhy** - to reconstruct the Perfect Phylogeny we have used PerfectPhy package. You can download it from [here](https://csiflabs.cs.ucdavis.edu/~gusfield/software.html) or install the version provided in the scripts directory of this repository
 * **[ete3](http://etetoolkit.org)** - install Python package, ete3 into Anaconda by running:
 ```
-conda install -c etetoolkit ete3
+  conda install -c etetoolkit ete3
 ```
 * **[PAUP](http://phylosolutions.com/paup-test/)** - to visualize the phylogenetic tree using the Newick output file, download and install PAUP
 ## Required inputs
