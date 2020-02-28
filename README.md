@@ -20,7 +20,7 @@ It is possible for the user to investigate the violations of infinite-sites assu
 ```
 conda install -c etetoolkit ete3
 ```
-* **[PAUP]** (http://phylosolutions.com/paup-test/) - to visualize the phylogenetic tree using the Newick output file, download and install PAUP
+* **[PAUP](http://phylosolutions.com/paup-test/)** - to visualize the phylogenetic tree using the Newick output file, download and install PAUP
 ## Required inputs
 * The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
 * At least the number of cells is required, or a file containing the cell names which is optional, in case the cell names are not avaialble, they are named as *cell k* where *k* is the index of the cell
