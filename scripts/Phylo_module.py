@@ -36,7 +36,7 @@ def gen_Newick(genotype, PerfectPhy_path, out_dir_path, names_):
 	result_name = PerfectPhy_path+"src/tree_result.txt"
 	if not out_dir_path.endswith("/"):
 		out_dir_path+="/"
-	result_newick = out_dir_path+"result_newick.nex"
+	result_newick = out_dir_path+"phylogeny.nex"
 	cmd = 'rm '+result_name
 	os.system(cmd)
 	cmd ='rm '+result_newick

@@ -57,7 +57,6 @@ def Parse(cell_names_file, mpileup_file):
 		if len(line.strip())!=0:
 			tmp = line.strip().split("\t")
 			names_.append(tmp[0])
-	print("# of cells %d" %len(names_))
 
 	pileup = open(mpileup_file,"r")
 
@@ -73,7 +72,6 @@ def Parse(cell_names_file, mpileup_file):
 		alts_.append([])
 		depth_.append([])
 
-	print("Parse the mpileup file")	
 	pile_arr = pileup.readlines()
 	pileup.close()
 	for line in pile_arr:
