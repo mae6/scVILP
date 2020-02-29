@@ -177,7 +177,7 @@ if __name__=="__main__":
 	PerfectPhy_path_ = "./PerfectPhy"
 	#########################################################################
 	K_ = 0
-	fn_given = 0.325
+	fn_given = 0.1
 	fp_given = 1e-08
 	missing_data_threshold = 10
 	out_path = "./"
@@ -209,13 +209,13 @@ if __name__=="__main__":
 		print("Please enter the path to the mpileup file\nUsage: python scVILP_main.py -in <path to the mpileup file> -names <path to the list of cell names>")
 		sys.exit()
 	if args['missing data threshold']!=None:
-		missing_data_threshold = args['missing data threshold']
+		missing_data_threshold = float(args['missing data threshold'])
 	if args['false positive rate']!=None:
-		fp_given = args['false positive rate']
+		fp_given = float(args['false positive rate'])
 	if args['false negative rate']!=None:
-		fn_given = args['false negative rate']
+		fn_given = float(args['false negative rate'])
 	if args['maximum number of violations']!=None:
-		K_ = args['maximum number of violations']
+		K_ = int(args['maximum number of violations'])
 
 
 	##############################################################################
