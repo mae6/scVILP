@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import numpy as np 
 import argparse
 from gurobipy import *
@@ -17,10 +18,8 @@ from scipy.special import gammaln
 from ete3 import Tree
 import time 
 from cdecimal import Decimal
-from ete3 import Tree
 import scipy.cluster.hierarchy as hier
 import scipy.spatial.distance as dist
-from sklearn.cluster import KMeans
 import parser
 import VCF
 import Phylo_module
