@@ -70,11 +70,11 @@ if __name__ == "__main__":
 	else:
 		out_path = "./candidate_loci.mpileup"
 	if args['minimum coverage']!=None:
-		ms = args['minimum coverage']
+		ms = int(args['minimum coverage'])
 	else:
 		ms = 3
 	if args['minimum cells']!=None:
-		nmc = args['minimum cells']
+		nmc = int(args['minimum cells'])
 	else:
 		nmc = 2
 
