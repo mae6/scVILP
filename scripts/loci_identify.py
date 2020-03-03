@@ -80,12 +80,9 @@ if __name__ == "__main__":
 
 	print("# cells "+str(num_cells))
 
-	# pileup = open(in_path, "r")
 	ed_pileup = open(out_path, "w")
 
 	print("Parse the mpileup file")	
-	# pile_arr = pileup.readlines()
-	# pileup.close()
 	with open(in_path, "r") as infile:
 		for line in infile:
 			tmp_arr = []
