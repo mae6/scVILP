@@ -68,7 +68,7 @@ if __name__ == "__main__":
 	if args['output file name']!=None:
 		out_path = args['output file name']
 	else:
-		out_path = "./preselected_loci.mpileup"
+		out_path = "./candidate_loci.mpileup"
 	if args['minimum coverage']!=None:
 		ms = args['minimum coverage']
 	else:
@@ -80,28 +80,28 @@ if __name__ == "__main__":
 
 	print("# cells "+str(num_cells))
 
-	pileup = open(in_path, "r")
+	# pileup = open(in_path, "r")
 	ed_pileup = open(out_path, "w")
 
 	print("Parse the mpileup file")	
-	pile_arr = pileup.readlines()
-	pileup.close()
+	# pile_arr = pileup.readlines()
+	# pileup.close()
+	with open(in_path, "r") as infile:
+		for line in infile:
+			tmp_arr = []
+			nmc_count = 0
+			currecnt_pos = int(line.strip().split('\t')[1])
+			split = line.strip().split('\t')[3:]
+			for i in range(num_cells):
+				if int(split[3*i])==0:
+						# flag = True
+					tmp_arr.append([0,0])
+				else:
+						# print split[3*i+1]
+					tmp_arr.append([match(split[3*i+1]),mismatch(split[3*i+1])])
+					if mismatch(split[3*i+1])>=ms:
+						nmc_count+=1
 
-	for line in pile_arr:
-		tmp_arr = []
-		nmc_count = 0
-		currecnt_pos = int(line.strip().split('\t')[1])
-		split = line.strip().split('\t')[3:]
-		for i in range(num_cells):
-			if int(split[3*i])==0:
-					# flag = True
-				tmp_arr.append([0,0])
-			else:
-					# print split[3*i+1]
-				tmp_arr.append([match(split[3*i+1]),mismatch(split[3*i+1])])
-				if mismatch(split[3*i+1])>=ms:
-					nmc_count+=1
-
-		if nmc_count>=nmc:
-			ed_pileup.write(line)
+			if nmc_count>=nmc:
+				ed_pileup.write(line)
 	ed_pileup.close()
