@@ -158,7 +158,7 @@ def optimize(read_count_mat, fp, fn, missing_data_thr, K_vios, mu0, mu1):
     model.optimize()
     print('IsMIP: %d' % model.IsMIP)
     if model.status == GRB.Status.INFEASIBLE:
-    	print "The model is infeasible"
+    	print("The model is infeasible")
     print("Solved with MIPFocus: %d" % model.Params.MIPFocus)
     print("The noisy model has been optimized")
     print('Obj: %g' % model.objVal)
