@@ -89,7 +89,7 @@ def gen_Newick(genotype, PerfectPhy_path, out_dir_path, names_):
 
 	print("uniqueness of perfect phylogeny of the Inferred Tree:")
 	for line in p2_method.stdout.readlines():
-		print line
+		print(line)
 	##################### Build a Tree object from Newick(s) #######################
 	tree_method = Tree(data_method, format=8)
 
