@@ -72,36 +72,34 @@ def Parse(cell_names_file, mpileup_file):
 		alts_.append([])
 		depth_.append([])
 
-	pile_arr = pileup.readlines()
-	pileup.close()
-	for line in pile_arr:
-		depth_arr = []
-		rc_arr = []
-		alt_arr = []
-		nmc_count = 0
-		sections = line.strip().split('\t')
-		current_pos = int(sections[1])
-		positions_.append(current_pos)
-		chroms_.append(chr_extract(sections[0]))
-		refs_.append(sections[2])
-		split = sections[3:]
-		for i in range(num_cells):
-			if int(split[3*i])==0:
-				rc_arr.append([0,0])
-				alt_arr.append("*")
-				depth_arr.append(0)
-			else:
-				(mis_val, alt_str) = mismatch(split[3*i+1])
-				rc_arr.append([match(split[3*i+1]),mis_val])
-				alt_arr.append(alt_str)
-				depth_arr.append(int(split[3*i]))
+	with open(mpileup_file, "r") as infile:
+		for line in infile:
+			depth_arr = []
+			rc_arr = []
+			alt_arr = []
+			nmc_count = 0
+			sections = line.strip().split('\t')
+			current_pos = int(sections[1])
+			positions_.append(current_pos)
+			chroms_.append(chr_extract(sections[0]))
+			refs_.append(sections[2])
+			split = sections[3:]
+			for i in range(num_cells):
+				if int(split[3*i])==0:
+					rc_arr.append([0,0])
+					alt_arr.append("*")
+					depth_arr.append(0)
+				else:
+					(mis_val, alt_str) = mismatch(split[3*i+1])
+					rc_arr.append([match(split[3*i+1]),mis_val])
+					alt_arr.append(alt_str)
+					depth_arr.append(int(split[3*i]))
 
-		for i in range(num_cells):
-			read_counts_[i].append(rc_arr[i])
-			alts_[i].append(alt_arr[i])
-			depth_[i].append(depth_arr[i])
+			for i in range(num_cells):
+				read_counts_[i].append(rc_arr[i])
+				alts_[i].append(alt_arr[i])
+				depth_[i].append(depth_arr[i])
 
 	read_counts_=np.array(read_counts_)
-	del pile_arr
 	gc.collect()
 	return (read_counts_, alts_, refs_, chroms_, positions_, names_, depth_)

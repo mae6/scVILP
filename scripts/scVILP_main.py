@@ -46,7 +46,14 @@ def check_InCompatibility(Matrix):
 	for p in range(l):
 		q = p+1
 		while q<l:
+			count01=0
+			count10=0
+			count11=0
 			for cell in range(n):
+				if count01+count10+count11==3:
+					break  
+				# if Matrix[cell][p]==0 and Matrix[cell][q]==0:
+				# 	B_prime[p][q][0]=1
 				if Matrix[cell][p]==0 and Matrix[cell][q]==1:
 					B_prime[p][q][1]=1
 				elif Matrix[cell][p]==1 and Matrix[cell][q]==0:
