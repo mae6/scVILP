@@ -53,7 +53,7 @@ def gen_Newick(genotype, PerfectPhy_path, out_dir_path, names_):
 	for i in range(n):
 		temp2 = ""
 		for j in range(l_R_removal):
-			temp2+=str(R[i][j])
+			temp2+=str(int(R[i][j]))
 			
 		R_taxa.append(temp2)
 
@@ -67,11 +67,11 @@ def gen_Newick(genotype, PerfectPhy_path, out_dir_path, names_):
 
 		for j in range(l_R_removal):
 			if j==l_R_removal-1 and i!=n-1:
-				tree_result.write(str(R[i][j])+"\n")
+				tree_result.write(str(int(R[i][j]))+"\n")
 			elif j==l_R_removal-1 and i==n-1:
-				tree_result.write(str(R[i][j]))
+				tree_result.write(str(int(R[i][j])))
 			else:
-				tree_result.write(str(R[i][j])+"\t")
+				tree_result.write(str(int(R[i][j]))+"\t")
 	tree_result.close()
 	###################### Fourth Post Processing Step ############################
 	######### Construct the perfect phylogeny using PerfectPhy ####################
@@ -99,6 +99,7 @@ def gen_Newick(genotype, PerfectPhy_path, out_dir_path, names_):
 			leaf.add_child(name=str(tmp_tuple[0]+1))
 			for new_node in tmp_tuple[1:]:
 				leaf.add_child(name=str(new_node+1))
+
 	for leaf in tree_method:
 		leaf.name = names_[int(leaf.name)-1]
 	######## Name the internal nodes #############
