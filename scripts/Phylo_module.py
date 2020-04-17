@@ -132,3 +132,4 @@ def gen_Newick(genotype, PerfectPhy_path, out_dir_path, names_):
 	trees.write(data_method_write+"\n")
 	trees.write("END;")
 	trees.close()
+	return data_method_write
