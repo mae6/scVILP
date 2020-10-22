@@ -17,7 +17,7 @@ from scipy.special import comb
 from scipy.special import gammaln
 from ete3 import Tree
 import time 
-from cdecimal import Decimal
+from decimal import Decimal
 import scipy.cluster.hierarchy as hier
 import scipy.spatial.distance as dist
 import parser
