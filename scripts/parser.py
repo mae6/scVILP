@@ -8,6 +8,8 @@ def chr_extract(chr_):
 		return 23
 	elif chr_[-1]=="Y" or chr_[-1]=="y":
 		return 24
+	elif chr_[-1]=="M" or chr_[-1]=="m":
+		return 25
 	else:
 		chrString = ""
 		for i in chr_:
