@@ -12,15 +12,43 @@ It is possible for the user to investigate the violations of infinite-sites assu
 * [Contact](#contact)
 
 ## Getting started
-### Prerequisites
-* **[Anaconda](https://docs.anaconda.com/anaconda/install/)** - we recommend installing Anaconda for your OS to manage the required packages
-* **[Gurobi](https://www.gurobi.com/gurobi-and-anaconda-for-mac/)** - after installation of Anaconda, you need to install Gurobi optimizer into Anaconda for Integer Linear Programming 
-* **PerfectPhy** - to reconstruct the Perfect Phylogeny we have used PerfectPhy package. You can download it from [here](https://csiflabs.cs.ucdavis.edu/~gusfield/software.html) or install the version provided in the scripts directory of this repository
-* **[ete3](http://etetoolkit.org)** - install Python package, ete3 into Anaconda by running:
+
+### Obtaining scVILP (and PerfectPhy)
+
+The easiest way to obtain scVILP including a copy of PerfectPhy is to use:
+
 ```
-  conda install -c etetoolkit ete3
+git clone https://github.com/mae6/scVILP.git
 ```
-* **[PAUP](http://phylosolutions.com/paup-test/)** - to visualize the phylogenetic tree using the Newick output file, download and install PAUP
+
+**PerfectPhy** is used to reconstruct the Perfect Phylogeny. The original software can be found [here](https://csiflabs.cs.ucdavis.edu/~gusfield/software.html), but we also provide a version in the scripts directory of this repository.
+
+### Installing dependencies
+
+scVILP depends on a number of python modules and uses the Gurobi optimizer.
+The easiest way to install all those dependencies is via (bio)conda.
+For quick install instructions, see: https://bioconda.github.io/user/install.html
+
+Once you have set this up, you can use the file `scvilp_conda.yaml` to install those dependencies:
+
+```
+cd scVILP
+conda env create -f scvilp_conda.yaml
+```
+
+This creates an environment called `scvilp` that you can activate with:
+
+```
+conda activate scvilp
+```
+
+Before using scvilp as specified below, you will further have to obtain a license to use it and install that license on the machine on which you want to run scvilp (with the `scvilp` environment activated and using the command provided with the license).
+For academic purposes, you can for example obtain a free license:
+https://www.gurobi.com/downloads/end-user-license-agreement-academic/
+
+**[PAUP](http://phylosolutions.com/paup-test/)** - to visualize the phylogenetic tree using the Newick output file, you can further download and install PAUP.
+
+
 ## Required inputs
 * The input data of scVILP is the output of sequence alignment in [mpileup](http://www.htslib.org/doc/samtools-mpileup.html) format
 * At least the number of cells is required, or a file containing the cell names which is optional, in case the cell names are not avaialble, they are named as *cell k* where *k* is the index of the cell
