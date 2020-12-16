@@ -12,7 +12,7 @@ def gen_VCF(out_dir, genotype_mat, read_count_mat_, chrs, posits, alt_counts, rf
 	header = "##fileformat=VCF\n##fileDate="+now+"\n##FILTER=<ID=LowQual,Description=\"Low quality\">\n##INFO=<ID=DP,Number=1,Type=Integer,Description=\"Approximate read depth; some reads may have been filtered\">\n##FORMAT=<ID=GT,Number=1,Type=String,Description=\"Genotype\">\n##FORMAT=<ID=DP,Number=1,Type=Integer,Description=\"Read Depth\">\n##FORMAT=<ID=DPR,Number=1,Type=Integer,Description=\"Number of observation for each allele\">\n##FORMAT=<ID=RO,Number=1,Type=Integer,Description=\"Reference allele observed count\">\n##FORMAT=<ID=AO,Number=1,Type=Integer,Description=\"Alternate allele observed count\">\n#CHROM\tPOS\tID\tREF\tALT\tFILTER\tINFO\tFORMAT"
 	for cell in ids:
 		header+="\t"+cell
-	out_f.write(header)
+	out_f.write(header+"\n")
 	for pos in range(l):
 		total_depth = 0
 		tmp_str = str(chrs[pos])+"\t"+str(posits[pos])+"\t*\t"+rfs[pos]+"\t"
